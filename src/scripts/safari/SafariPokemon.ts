@@ -48,7 +48,7 @@ class SafariPokemon implements PokemonInterface {
         this._angry = ko.observable(0);
         this._eating = ko.observable(0);
         this._eatingBait = ko.observable(BaitType.Bait);
-        this.levelModifier = (Safari.safariLevel() - 1) / 50;
+        this.levelModifier = (Math.min(40, Safari.safariLevel()) - 1) / 50;
 
         switch (sprite) {
             case 'base' : this.spriteID = Math.floor(this.id);
